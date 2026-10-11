@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Dependency-free test runner (no xunit/NuGet needed): works offline and without the game. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RollForward>Major</RollForward>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <RootNamespace>SfmKit.Tests</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- ONLY the Unity-free part of the kit. Il2Cpp/ needs the game's assemblies and is not testable here. -->
+    <Compile Include="..\..\src\SfmKit\Pure\**\*.cs" Link="SfmKit.Pure\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+</Project>
