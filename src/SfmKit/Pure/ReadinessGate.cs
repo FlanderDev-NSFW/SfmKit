@@ -14,7 +14,7 @@ namespace SfmKit.Pure
     /// Verification: unit-tested (tests/SfmKit.Tests). Generalised from CollarAsset RigReadinessGate, which
     /// uses 3 frames / 0.5 s and is in-game verified there.
     /// </summary>
-    public sealed class ReadinessGate
+    internal sealed class ReadinessGate
     {
         private readonly int _minFrames;
         private readonly float _minSeconds;

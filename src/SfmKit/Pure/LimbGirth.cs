@@ -10,7 +10,7 @@ namespace SfmKit.Pure
     /// Takes the vertices in a thin slice across the leg (perpendicular to <c>axis</c>, centred on <c>center</c>), finds the
     /// slice's middle and the largest distance from it, so a round cuff hole around that middle clears the whole outline.
     /// </summary>
-    public static class LimbGirth
+    internal static class LimbGirth
     {
         public struct Fit
         {

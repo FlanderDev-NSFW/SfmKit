@@ -2,7 +2,7 @@ using System;
 
 namespace SfmKit.Pure
 {
-    public enum LockState { Unlocked, Closing, Locked, Opening }
+    internal enum LockState { Unlocked, Closing, Locked, Opening }
 
     /// <summary>
     /// Lock / unlock rules for a restraint, like the game's normal handcuffs [observed 2026-10-11, SpreaderBar; also used by
@@ -11,7 +11,7 @@ namespace SfmKit.Pure
     /// frees; the game's handcuffs start at MCommon.HandcuffsProbability 0.1) and grows by ChancePerFailure per failure. Releasing the key early cancels the attempt; the next attempt
     /// needs a new press. Pure: time and the random roll come in from the caller.
     /// </summary>
-    public sealed class LockMachine
+    internal sealed class LockMachine
     {
         public float CloseSeconds = 0.6f, OpenSeconds = 0.6f, AttemptSeconds = 4.5f;
         public float BaseChance = 0.1f, ChancePerFailure = 0.02f;

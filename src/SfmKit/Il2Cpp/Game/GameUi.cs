@@ -11,7 +11,7 @@ using UnityEngine;
 namespace SfmKit.Game
 {
     /// <summary>Small questions about the game's UI and feedback to the player. Each call fails safe (false / nothing).</summary>
-    public sealed class GameUi
+    internal sealed class GameUi
     {
         private Transform _uiLayer;
         private Il2CppArrayBase<InteractAreaController> _areas;

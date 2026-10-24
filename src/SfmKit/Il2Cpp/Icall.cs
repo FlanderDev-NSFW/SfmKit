@@ -14,7 +14,7 @@ namespace SfmKit.Il2Cpp
     /// Verification: the same IL2CPP.il2cpp_resolve_icall + Marshal.GetDelegateForFunctionPointer pattern is
     /// compiled and in-game verified in CollarAsset (CursorLease, NativeFlags, C3MovementHook).
     /// </summary>
-    public static class Icall
+    internal static class Icall
     {
         /// <summary>Resolve an icall pointer or throw. Returns a non-zero pointer.</summary>
         public static IntPtr Resolve(string name)
@@ -38,7 +38,7 @@ namespace SfmKit.Il2Cpp
     /// Verification: pattern copied from CollarAsset (in-game verified there); this wrapper itself is
     /// compile-verified only until a mod using it has been accepted in game.
     /// </summary>
-    public static class NativeBool
+    internal static class NativeBool
     {
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
         private delegate byte Getter(IntPtr instance);
