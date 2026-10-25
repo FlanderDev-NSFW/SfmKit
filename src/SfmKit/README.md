@@ -10,7 +10,8 @@ Reusable helpers for SecretFlasherManaka BepInEx IL2CPP mods. Each mod compiles 
 | `Il2Cpp/Game/` | Game-specific helpers (`ExposureUnnoticed2.*`): `GameUi` (panel open, interaction area, sound, message bar). Ring entries, number shortcuts and the + / - keys moved to `mods/RestraintHub` (one place builds the ring for all restraint mods) | game interop | in game via WallRestraint / RestraintHub (L3 2026-10-24) |
 
 `Pure/LockMachine` holds the lock / struggle-free rules shared by SpreaderBar and WallRestraint, `Pure/LimbGirth` a limb's
-thickness from a cut through baked meshes (SpreaderBar's cuff fit); both unit-tested in SpreaderBar.Tests.
+thickness from a cut through baked meshes (SpreaderBar's cuff fit), `Pure/ScaledValue` a game value scaled by a factor without
+compounding (SpreaderBar's walking speed, Binders' crawling speed); all unit-tested in SpreaderBar.Tests.
 
 Rules
 - **Types are `internal`.** Each mod has its own copy; a mod that references another mod's DLL (e.g. RestraintHub) would otherwise
