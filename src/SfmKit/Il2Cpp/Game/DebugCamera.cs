@@ -9,7 +9,7 @@ namespace SfmKit.Game
     /// Diagnostics: points the main camera at her from a fixed side, set just before it renders (call from a Camera.onPreCull
     /// hook), with its own light - for screenshots where the game's camera cannot go (it keeps close to her and stops at walls).
     /// A spec is "side distance [target]": side = front, back, left, right, top or below (her frame); distance in metres
-    /// (default 1.2); target = "feet" (between her ankles), a name the caller resolves (<paramref name="target"/> in
+    /// (default 1.2); target = "feet" (between her ankles), a name the caller resolves (the `target` argument of
     /// <see cref="Aim"/>), or nothing (her middle, between the hips and the neck). Empty spec = off (the light is removed).
     /// Verified in game through Binders (body views, ankles) and NipplePiercings (nipple close-ups), 2026-10-25.
     /// </summary>
